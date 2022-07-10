@@ -17,8 +17,6 @@ protocol SchoolDetailApi: ApiServiceType {
     )
 }
 
-
-
 extension SchoolDetailApi {
     func getDetail(
         for name: String,
@@ -33,3 +31,6 @@ extension SchoolDetailApi {
         }
     }
 }
+
+
+

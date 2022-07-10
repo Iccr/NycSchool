@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var indicator = UIActivityIndicatorView(style: .large)
     
     
-    var api: SchoolApi?
+    var api: SchoolFetcher?
     var schools: [ListModelType] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.api = SchoolApi()
+        self.api = SchoolFetcher()
         self.navigationItem.title = "Schools"
         configureTableView()
         configureIndicator()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     private func getSchool() {
         indicator.startAnimating()
-        SchoolApi().getSchool { schools in
+        self.api?.getSchool { schools in
             DispatchQueue.main.async {
                 self.indicator.stopAnimating()
             }
@@ -67,7 +67,7 @@ extension ViewController: UITableViewDelegate {
             return
         }
         RouterFactory
-            .detailRouter(params: school, api: self.api ?? SchoolApi(), source: self)
+            .detailRouter(params: school, api: SchoolDetailFetcher(), source: self)
             .route()
     }
     

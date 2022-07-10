@@ -11,9 +11,9 @@ import UIKit
 class SchoolDetailRouter: Router {
     var source: UIViewController!
     var school: ListModelType
-    var api: SchoolApi
+    var api: SchoolDetailFetcher
     
-    init(school: ListModelType, api: SchoolApi, source: UIViewController) {
+    init(school: ListModelType, api: SchoolDetailFetcher, source: UIViewController) {
         self.source = source
         self.school = school
         self.api = api

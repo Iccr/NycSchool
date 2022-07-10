@@ -8,4 +8,6 @@
 import Foundation
 
 
-struct SchoolApi: SchoolListApi, SchoolDetailApi {}
+struct SchoolFetcher: SchoolListApi {}
+
+struct SchoolDetailFetcher: SchoolDetailApi {}

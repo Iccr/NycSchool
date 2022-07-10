@@ -11,8 +11,8 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var school: ListModelType?
+    var api: SchoolDetailFetcher?
     
-    var api: SchoolApi?
     var schoolDetails: [SchoolDetail] = [] {
         didSet {
             DispatchQueue.main.async {
