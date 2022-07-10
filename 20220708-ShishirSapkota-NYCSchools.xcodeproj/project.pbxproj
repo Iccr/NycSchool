@@ -21,7 +21,6 @@
 		900497E22878DF36002A991A /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900497E12878DF36002A991A /* SchoolTableViewCell.swift */; };
 		900497E42878E408002A991A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900497E32878E408002A991A /* DetailViewController.swift */; };
 		900497E62878F174002A991A /* SchoolDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900497E52878F174002A991A /* SchoolDetail.storyboard */; };
-		9015CF39287B456300CCF3C2 /* NoDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9015CF38287B456300CCF3C2 /* NoDataTest.swift */; };
 		90785DB9287A0CC3004803E6 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785DB8287A0CC3004803E6 /* ScoreTableViewCell.swift */; };
 		90785DBF287A1D16004803E6 /* SchoolDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785DBE287A1D16004803E6 /* SchoolDetailModel.swift */; };
 		90785DC1287A1D91004803E6 /* ApiServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785DC0287A1D91004803E6 /* ApiServiceType.swift */; };
@@ -75,7 +74,6 @@
 		900497E12878DF36002A991A /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		900497E32878E408002A991A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		900497E52878F174002A991A /* SchoolDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchoolDetail.storyboard; sourceTree = "<group>"; };
-		9015CF38287B456300CCF3C2 /* NoDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataTest.swift; sourceTree = "<group>"; };
 		90785DB8287A0CC3004803E6 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		90785DBE287A1D16004803E6 /* SchoolDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailModel.swift; sourceTree = "<group>"; };
 		90785DC0287A1D91004803E6 /* ApiServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceType.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			children = (
 				900497BC2878BDC0002A991A /* _0220708_ShishirSapkota_NYCSchoolsTests.swift */,
 				900497BE2878BDC0002A991A /* Info.plist */,
-				9015CF38287B456300CCF3C2 /* NoDataTest.swift */,
 			);
 			path = "20220708-ShishirSapkota-NYCSchoolsTests";
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9015CF39287B456300CCF3C2 /* NoDataTest.swift in Sources */,
 				900497BD2878BDC0002A991A /* _0220708_ShishirSapkota_NYCSchoolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

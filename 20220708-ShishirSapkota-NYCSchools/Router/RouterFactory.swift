@@ -9,7 +9,7 @@ import UIKit
 
 
 class RouterFactory {
-    static func detailRouter(params: ListModelType, api: SchoolDetailFetcher, source: UIViewController) -> Router {
+    static func detailRouter(params: ListModelType, api: SchoolDetailApi, source: UIViewController) -> Router {
         SchoolDetailRouter(school: params, api: api, source: source)
     }
 }

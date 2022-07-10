@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var school: ListModelType?
-    var api: SchoolDetailFetcher?
+    var api: SchoolDetailApi?
     
     var schoolDetails: [SchoolDetail] = [] {
         didSet {
