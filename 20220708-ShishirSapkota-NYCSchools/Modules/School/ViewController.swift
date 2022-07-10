@@ -10,9 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
+    
     var indicator = UIActivityIndicatorView(style: .large)
-    
-    
     var api: SchoolFetcher?
     var schools: [ListModelType] = [] {
         didSet {
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
         configureTableView()
         configureIndicator()
         getSchool()
-        
     }
     
     private func configureTableView() {

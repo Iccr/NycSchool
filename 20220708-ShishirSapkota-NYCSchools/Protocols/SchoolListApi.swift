@@ -8,7 +8,7 @@
 import Foundation
 
 
-
+// Any class conforming to SchoolListApi can intitiate requests to get the school list
 protocol SchoolListApi: ApiServiceType {
     func getSchool(
         success: @escaping ([ListModelType]) -> (),

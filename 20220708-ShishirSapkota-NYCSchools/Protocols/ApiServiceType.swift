@@ -8,6 +8,8 @@
 import Foundation
 
 
+// Whichever class follows this protocol, They get shared instance of NetworkManager for free
+// see SchoolListApi protocol for example
 protocol ApiServiceType {
     var api: NetworkManager { get }
 }

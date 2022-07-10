@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// This is the only place from where all request are handled. Its shared instance is shared across the app via ApiServiceType
 final class NetworkManager {
     static let shared = NetworkManager()
     private init() {}

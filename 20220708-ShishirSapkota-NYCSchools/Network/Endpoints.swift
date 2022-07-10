@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// All Endpoint regarding this app will live here. Along with the http methods.
 struct EndPoint {
     static var schools: URL {
         guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {

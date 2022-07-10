@@ -9,10 +9,12 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet weak var noDataLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var school: ListModelType?
     var api: SchoolDetailApi?
-    
+    var indicator = UIActivityIndicatorView(style: .large)
     var schoolDetails: [SchoolDetail] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -25,14 +27,7 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    var indicator = UIActivityIndicatorView(style: .large)
-    
-    @IBOutlet weak var noDataLabel: UILabel!
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-   
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = school?.title ?? ""
@@ -46,27 +41,12 @@ class DetailViewController: UIViewController {
         configureIndicator()
     }
     
-   
     private func configureIndicator() {
         indicator.center = self.view.center
         indicator.hidesWhenStopped = true
         indicator.color = .red
         view.addSubview(indicator)
     }
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension DetailViewController: UITableViewDelegate {
@@ -82,11 +62,8 @@ extension DetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let model = self.schoolDetails.elementAt(index: indexPath.row)
-        
         return configureCell(tableView, indexPath, model: model)
-        
     }
     
     
@@ -109,8 +86,6 @@ extension DetailViewController {
                 self.indicator.stopAnimating()
             }
             self.schoolDetails = schoolDetails
-            print("detail is")
-            print(self.schoolDetails)
         }, failure: { error in
             DispatchQueue.main.async {
                 self.indicator.stopAnimating()

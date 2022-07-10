@@ -8,7 +8,8 @@
 import Foundation
 
 
-
+// Any class conforming to SchoolListApi can intitiate requests to get the detail of the specified detail
+// here name is the id (dbn) of the school
 protocol SchoolDetailApi: ApiServiceType {
     func getDetail(
         for name: String,
