@@ -16,12 +16,18 @@ class DetailViewController: UIViewController {
     var schoolDetails: [SchoolDetail] = [] {
         didSet {
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                if self.schoolDetails.isEmpty {
+                    self.view.bringSubviewToFront(self.noDataLabel)
+                }else {
+                    self.tableView.reloadData()
+                }
+                
             }
         }
     }
     var indicator = UIActivityIndicatorView(style: .large)
     
+    @IBOutlet weak var noDataLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
